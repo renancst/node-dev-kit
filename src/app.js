@@ -3,6 +3,7 @@ const consign = require('consign')
 
 consign({ cwd: 'src', verbose: false })
   .include('./config/middleware.js')
+  .then('./db.js')
   .then('./routes')
   .then('./config/routes.js')
   .into(app)
